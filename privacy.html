@@ -14,43 +14,85 @@
 
   <p>This policy explains what data PogCut ("we") accesses when a content creator
   ("you") authorizes it, and how that data is used. PogCut is operated by
-  William Gentil, France.</p>
+  William Gentil, France, who is the data controller.</p>
 
   <h2>Data we access</h2>
   <ul>
-    <li><strong>YouTube (Google):</strong> permission to upload videos to your channel and to
-    read your channel's name, so we can confirm the right channel is connected.</li>
-    <li><strong>Twitch:</strong> your public clips and their download links, through the
-    editor or clip permissions you grant.</li>
-    <li><strong>TikTok and Instagram</strong> (only if you enable them): permission to upload
-    videos to your account and to read your account name.</li>
+    <li><strong>YouTube (Google):</strong> permission to upload videos to your channel
+    (<code>youtube.upload</code>) and to read your channel's name
+    (<code>youtube.readonly</code>), so we can confirm the right channel is connected. We also
+    read public information about your videos (title, most replayed parts, public comments)
+    to find their best moments.</li>
+    <li><strong>Twitch:</strong> your clips and their download links, through the clip
+    permissions you grant.</li>
+    <li><strong>TikTok</strong> (only if you enable it): your account's display name
+    (<code>user.info.basic</code>) and permission to send videos to your account
+    (<code>video.upload</code>, <code>video.publish</code>).</li>
+    <li><strong>Instagram</strong> (only if you enable it): your professional account's
+    name and permission to publish Reels on it.</li>
     <li><strong>Your content:</strong> the clips and videos you authorize us to process.</li>
   </ul>
-  <p>We do not access your viewers' data, your private messages, your analytics, your
-  payment information or any other account data.</p>
+  <p>We do not access your viewers' personal data, your private messages, your analytics,
+  your payment information or any other account data.</p>
 
   <h2>How we use it</h2>
   <p>Only to provide the service you asked for: editing your clips and videos into short
-  videos and publishing them on your own accounts. We do not sell, rent or share your data
-  with anyone, and we do not use it for advertising.</p>
+  videos and publishing them on your own accounts. We do not sell or rent your data, we do
+  not use it for advertising, and we do not use it to train artificial intelligence models.</p>
 
-  <h2>Storage and security</h2>
-  <p>Access tokens are stored encrypted, as secrets of a private GitHub repository, and are
-  only used by the automated publishing job. Videos are processed temporarily and deleted
-  once published. We keep a list of the clips already published (clip identifier, title,
-  date) so the same clip is never published twice.</p>
+  <h2>Service providers</h2>
+  <p>To run the service, some data goes to these providers, only for the tasks listed:</p>
+  <ul>
+    <li><strong>Google Gemini API:</strong> the text transcript of a video, to suggest which
+    passages to turn into short videos and their titles.</li>
+    <li><strong>GitHub:</strong> hosts the automated job that edits and publishes the videos,
+    and stores the access tokens as encrypted secrets.</li>
+    <li><strong>Discord:</strong> the titles and links of the published videos, sent to a
+    private notification channel so we can follow the service.</li>
+  </ul>
+  <p>Transcription and editing run on our own job: your videos are not sent to any other
+  third party.</p>
 
-  <h2>YouTube API Services</h2>
+  <h2 id="google-limited-use">Google user data</h2>
+  <p>PogCut's use and transfer to any other app of information received from Google APIs will
+  adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google
+  API Services User Data Policy</a>, including the Limited Use requirements.</p>
   <p>PogCut uses YouTube API Services. By authorizing it, you agree to be bound by the
   <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling
   of your data is described in the <a href="https://policies.google.com/privacy">Google
   Privacy Policy</a>.</p>
 
-  <h2>Revoking access and deleting your data</h2>
+  <h2>Storage, security and retention</h2>
+  <ul>
+    <li><strong>Access tokens:</strong> stored encrypted as secrets of a private repository,
+    used only by the publishing job, kept until you revoke access or ask us to delete them.</li>
+    <li><strong>Videos:</strong> processed temporarily and deleted once published.</li>
+    <li><strong>Publishing history:</strong> clip identifier, title and date of each published
+    video, so the same clip is never published twice; kept while you use the service.</li>
+    <li><strong>Transcripts:</strong> kept while you use the service so a video is not
+    transcribed twice; deleted with your other data.</li>
+  </ul>
+
+  <h2 id="data-deletion">Revoking access and deleting your data</h2>
   <p>You can revoke our access at any time: for Google/YouTube on the
-  <a href="https://security.google.com/settings/security/permissions">Google security
-  settings page</a>, and in the connected-apps settings of Twitch, TikTok and Instagram.
-  Write to us and we will delete your tokens and stored data within 7 days.</p>
+  <a href="https://myaccount.google.com/permissions">Google account permissions page</a>,
+  and in the connected-apps settings of Twitch, TikTok and Instagram (on Instagram and
+  Facebook: Settings, then Apps and websites).</p>
+  <p>To delete your data, email <a href="mailto:skb.clips00@gmail.com">skb.clips00@gmail.com</a>
+  with the subject "Delete my data" from the address you signed up with, or tell us which
+  accounts you connected. We delete your tokens, transcripts and publishing history within
+  7 days and confirm by email. Videos already published stay on your accounts until you
+  delete them there.</p>
+
+  <h2>Your rights</h2>
+  <p>Under the GDPR you can access, correct, export or delete your data, and object to its
+  processing, by writing to us. You can also lodge a complaint with the French data
+  protection authority, the <a href="https://www.cnil.fr">CNIL</a>.</p>
+  <p>The service is meant for creators aged 18 or over, or minors with their legal
+  guardian's consent.</p>
+
+  <h2>Changes</h2>
+  <p>We will notify connected creators by email before any significant change to this policy.</p>
 
   <h2>Contact</h2>
   <p><a href="mailto:skb.clips00@gmail.com">skb.clips00@gmail.com</a></p>
